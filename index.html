@@ -13,6 +13,8 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/flipclock.css">
 
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
@@ -20,7 +22,7 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
+	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -76,15 +78,13 @@
                         <h1><img class="img-responsive" src="img/logo.png" alt=""></h1>
                         <h2>A cooperative text-based horror game</h2>
                         <hr class="intro-divider">
+						<div class="your-clock clock"></div>
                         <ul class="list-inline intro-social-buttons">
                             <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                                <a href="https://twitter.com/twitchinstalls" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                             </li>
                             <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                                <a href="https://twitch.tv/twitchinstallsarchlinux" class="btn btn-default btn-lg"><i class="fa fa-twitch fa-fw"></i> <span class="network-name">Twitch</span></a>
                             </li>
                         </ul>
                     </div>
@@ -220,10 +220,25 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
+    
+	<script src="js/jquery.js"></script>
+	<script src="js/flipclock.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+	
+	<script>
+	$(function() {
+		var clock = $('.your-clock').FlipClock({
+			autoStart: true,
+			countdown: true,
+			clockFace: 'DailyCounter'
+		});
+		var countdownTime = new Date(Date.UTC(2015, 9, 31, 20, 00)).getTime() - Date.now();
+		console.log(countdownTime);
+		clock.setTime(countdownTime / 1000);
+		clock.start();
+	});
+	</script>
 
 </body>
 

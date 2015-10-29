@@ -30,6 +30,18 @@ h6 {
     font-weight: 400;
 }
 
+.flip-clock-wrapper {
+	margin: 0 auto;
+	display: inline-block;
+	text-align: center;
+	width: auto;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.flip-clock-label {
+	color: white !important ; 
+}
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
