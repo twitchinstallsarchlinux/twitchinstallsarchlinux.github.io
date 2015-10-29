@@ -80,6 +80,7 @@
                         <h2>A cooperative text-based horror game</h2>
                         <hr class="intro-divider">
 						<div class="your-clock clock"></div>
+						<p class="mobiletext"></p>
                         <ul class="list-inline intro-social-buttons">
                             <li>
                                 <a href="https://twitter.com/twitchinstalls" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
@@ -249,7 +250,7 @@
 	
 	<script>
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		document.getElementById("your-clock.clock").innerHTML = "Twitch Installs Arch Linux Launches on October 31st at 4:00 Eastern Time";
+		document.getElementById("mobiletext").innerHTML = "Twitch Installs Arch Linux Launches on October 31st at 4:00 Eastern Time";
 	}else
 		{
 	$(function() {
