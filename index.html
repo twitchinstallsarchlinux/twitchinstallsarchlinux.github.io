@@ -248,6 +248,10 @@
     <script src="js/bootstrap.min.js"></script>
 	
 	<script>
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ // some code..
+}else
+{
 	$(function() {
 		var clock = $('.your-clock').FlipClock({
 			autoStart: true,
@@ -259,6 +263,7 @@
 		clock.setTime(countdownTime / 1000);
 		clock.start();
 	});
+	}
 	</script>
 
 </body>
