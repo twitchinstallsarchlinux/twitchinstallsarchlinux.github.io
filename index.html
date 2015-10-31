@@ -95,9 +95,8 @@
               <h1><img class="img-responsive" src="img/logo.png" alt="Twitch installs Arch Linux"></h1>
               <h2>A cooperative text-based horror game</h2>
               <hr class="intro-divider">
-              <div class="your-clock clock"></div>
-              <p id="mobiletext"></p>
-              <ul class="list-inline intro-social-buttons">
+              <iframe src="http://player.twitch.tv/?channel=twitchinstallsarchlinux" frameborder="0" scrolling="no" height="378" width="620"></iframe>
+              <ul class="list-inline intro-social-buttons" style="margin-top: 10px;">
                 <li>
                 <a href="https://twitch.tv/twitchinstallsarchlinux" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-twitch fa-fw"></i> <span class="network-name">Twitch</span></a>
                 </li>
@@ -368,22 +367,6 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script>
-      if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        document.getElementById("mobiletext").innerHTML = "Twitch Installs Arch Linux Launches on October 31st at 4:00 Eastern Time";
-      } else {
-        $(function() {
-          var clock = $('.your-clock').FlipClock({
-            autoStart: true,
-            countdown: true,
-            clockFace: 'DailyCounter'
-          });
-          var countdownTime = new Date(Date.UTC(2015, 9, 31, 20, 00)).getTime() - Date.now();
-          console.log(countdownTime);
-          clock.setTime(countdownTime / 1000);
-          clock.start();
-        });
-      }
-
       $.fn.pageMe = function(opts){
             var $this = this,
                 defaults = {
