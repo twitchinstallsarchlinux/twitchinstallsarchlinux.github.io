@@ -39,6 +39,9 @@ h6 {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+.img-circle {
+    border-radius: 50%;
+}
 .flip-clock-label {
 	color: white !important ; 
 }
